@@ -1,0 +1,3 @@
+interface interationVendedor{
+  atualizarStatus:()=>void
+}
