@@ -7,6 +7,7 @@ class Vendedor extends Usuario{
     super(email, password, nome, telefone)
     this.cnpj = cnpj;
   }
+  
 }
 
 export default Vendedor
