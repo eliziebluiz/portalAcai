@@ -1,6 +1,5 @@
-import Endereco from "./endereco";
-import Acai from "./acai";
-import { createConstructor } from "typescript";
+import Endereco from "../RelacoesUsuario/endereco";
+import Acai from "../Pedido/acai";
 
 class Pedido {
   private tipoPagamento: boolean | null;
@@ -21,7 +20,7 @@ class Pedido {
   this.enderecoEntrega = null;
   this.itensAcai = [];
   }
-  setStatus(novoStatus:string) {
+  public setStatus(novoStatus:string) {
     this.status = novoStatus;
   }
   public getStatus():string{
@@ -29,7 +28,7 @@ class Pedido {
   }
 
   /**
-   * 
+   * Metodo para calcular o preço Açaí
    */
   public calculaPrecoAcai(acai:Acai[]):number {
     let valor = 0.0;
@@ -81,10 +80,11 @@ public getValor():number{
 }
 
 public imprimirPedido(){
-console.log(`Tipo de pagamento: (${this.tipoPagamento})\n Tipo  de entrega: (${this.tipoEntrega})\n Valor: (${this.valor})\n Status: (${this.status}) `);
+console.log(`Tipo de pagamento: (${this.tipoPagamento})\n Tipo  de entrega: (${this.tipoEntrega})\n Valor individual: (${this.valor})\n Status: (${this.status}) `);
 for(let i = 0; i < this.itensAcai.length; i++){
-  console.log("======================================================")
+  //console.log("======================================================");
   console.log(this.itensAcai[i].pedidoMontado());
+  console.log("======================================================");
 }
 }
 }

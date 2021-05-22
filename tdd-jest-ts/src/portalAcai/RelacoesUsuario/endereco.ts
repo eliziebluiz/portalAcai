@@ -1,5 +1,3 @@
-import Usuario from "./usuario"
-
 
 class Endereco{
   private rua: string;
@@ -15,4 +13,4 @@ class Endereco{
   }
 }
 
-export default Endereco
+export default Endereco;

@@ -10,6 +10,10 @@ class Usuario{
     this.nome = nome;
     this.telefone = telefone;
   }
+
+  public getEmail(){
+    return this.email;
+  }
 }
 
 export default Usuario
